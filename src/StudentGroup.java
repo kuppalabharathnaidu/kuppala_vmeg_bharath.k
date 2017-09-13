@@ -298,7 +298,7 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student[] getStudentsWithMaxAvgMark() {
+	public Student[] getStudentsWithMaxAvgMark() throws IllegalArgumentException {
 		// Add your implementation here
               double max=0;
 		Student[] students1=new Student[students.length];
@@ -319,7 +319,7 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student getNextStudent(Student student) {
+	public Student getNextStudent(Student student) throws IllegalArgumentException {
 		// Add your implementation here
 
 		int id=student.getId();
