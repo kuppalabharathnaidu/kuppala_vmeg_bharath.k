@@ -168,12 +168,32 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeToElement(Student student) {
 		// Add your implementation here
+               int c=0;
+		if(student==null)
+			throw new IllegalArgumentException();
+		for(int i=0;i<students.length;i++)
+		{
+		if(students[i]==student)
+		{
+		for(int j=i+1;j<students.length;j++)
+		{
+			students[c++]=students[j];
+		}
+		
+		break;
+		}
+			
+		}
+		for(int i=c;i<students.length;i++)
+		{
+		students[i]=null;
+		}
 	}
 
 	@Override
 	public void bubbleSort() {
 		// Add your implementation here
-	Arrays.sort(students);
+	     Arrays.sort(students);
                
 	}
 
@@ -217,6 +237,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
+
+		int id=student.getId();
+		for(int i=0;i<students.length;i++){
+		if(students[i].getId()==id)
+			return students[i+1];		
+}
 		return null;
 	}
 }
