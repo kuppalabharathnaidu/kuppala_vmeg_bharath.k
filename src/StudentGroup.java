@@ -319,14 +319,23 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student getNextStudent(Student student) throws IllegalArgumentException {
+	public Student getNextStudent(Student student) throws IllegalArgumentException{
 		// Add your implementation here
-
-		int id=student.getId();
-		for(int i=0;i<students.length;i++){
-		if(students[i].getId()==id)
-			return students[i+1];		
-}
+		if(student==null)
+			throw new IllegalArgumentException();
+		else{
+		for(int i=0;i<students.length;i++)
+		{
+		if(students[i]==student)
+		{
+		
+		return students[i+1];
+		
+		
+		}	
+		}
+		}
+			
 		return null;
 	}
 }
