@@ -51,10 +51,10 @@ public class StudentGroup implements StudentArrayOperation {
                         {
                             throw new IllegalArgumentException();
                          }
-else
-{
-return students[index];
-}
+              else
+             {
+             return students[index];
+             }
                      
 	}
 
@@ -92,11 +92,25 @@ return students[index];
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+                 
 	}
 
 	@Override
-	public void add(Student student, int index) {
+	public void add(Student student, int index) throws IllegalArgumentException {
 		// Add your implementation here
+
+                        if(students == null)
+                      {
+                        throw new IllegalArgumentException();    
+                      }
+
+		   for(int i=students.length+1;i>index-1;i--)
+                      {
+                             students[i]=students[i-1];           
+                      }
+                      students[index]=student;
+                      
+               
 	}
 
 	@Override
