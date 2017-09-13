@@ -156,7 +156,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		}
 		if(check==0)
-			throw new IllegalArgumentException("Student not exist");
+			throw new IllegalArgumentException();
 	}
 
 	@Override
@@ -290,7 +290,6 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		return 0;
 	}
-
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
@@ -315,7 +314,6 @@ public class StudentGroup implements StudentArrayOperation {
 			students1[check++]=students[i];
 		}
 		return students1;
-		
 	}
 
 	@Override
@@ -324,14 +322,12 @@ public class StudentGroup implements StudentArrayOperation {
 		if(student==null)
 			throw new IllegalArgumentException();
 		else{
-		for(int i=0;i<students.length;i++)
+		for(int j=0;i<students.length;i++)
 		{
-		if(students[i]==student)
+		if(students[j]==student)
 		{
 		
-		return students[i+1];
-		
-		
+		return students[j+1];
 		}	
 		}
 		}
