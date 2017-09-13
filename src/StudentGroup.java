@@ -92,6 +92,15 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+                if(student==null)
+			throw new IllegalArgumentException();
+                for(int i=0;i<students.length;i++){
+                    if(students[i]==null)
+                    {
+                        students[i]=student;
+                     }
+
+}
                  
 	}
 
@@ -131,8 +140,16 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void removeFromIndex(int index) {
+	public void removeFromIndex(int index) throws IllegalArgumentException{
 		// Add your implementation here
+                  if(index<0 || index>=students.length)
+			throw new IllegalArgumentException();
+		else{
+			for(int i=index+1;i<students.length;i++)
+			{
+			students[i]=null;
+			}
+		}	
 	}
 
 	@Override
