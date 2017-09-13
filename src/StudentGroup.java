@@ -322,7 +322,7 @@ public class StudentGroup implements StudentArrayOperation {
 		if(student==null)
 			throw new IllegalArgumentException();
 		else{
-		for(int j=0;i<students.length;i++)
+		for(int j=0;j<students.length;j++)
 		{
 		if(students[j]==student)
 		{
