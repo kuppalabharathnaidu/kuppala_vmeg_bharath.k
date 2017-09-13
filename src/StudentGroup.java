@@ -11,6 +11,8 @@ import java.util.Date;
  * DO NOT PUT any classes into packages
  *
  */
+
+import java.util.*;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
@@ -160,6 +162,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeToIndex(int index) {
 		// Add your implementation here
+                 
 	}
 
 	@Override
@@ -170,11 +173,14 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void bubbleSort() {
 		// Add your implementation here
+	Arrays.sort(students);
+               
 	}
 
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
+
 		return null;
 	}
 
