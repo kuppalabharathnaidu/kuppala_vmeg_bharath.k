@@ -192,9 +192,20 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 	}
 	@Override
-	public void removeToIndex(int index) {
+	
+                 public void removeToIndex(int index) throws IllegalArgumentException{
 		// Add your implementation here
-                 
+		int c=0;
+		if(index<0 || index>=students.length)
+			throw new IllegalArgumentException();
+		for(int i=index+1;i<students.length;i++)
+		{
+		students[c++]=students[i];
+		}
+		for(int i=c;i<students.length;i++)
+		{
+		students[i]=null;
+		}
 	}
 
 	@Override
